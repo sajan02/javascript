@@ -67,3 +67,69 @@ let obj = {
  */
 const calcCircumference = diameter => (Math.PI * diameter,'no')
 console.log(calcCircumference(3))
+
+/**
+ * 11. Spread Operator
+ */
+
+const { a1, b1, ...z } = { a1: 1, b1: 2, c1: 3, d1: 4 };
+console.log(a1) // 1
+console.log(b1) // 2
+console.log(z) // { c: 3, d: 4 }
+
+/**
+ * 12. Mandatory Parameter
+ */
+
+const mandatory = () => {
+    throw new Error('Missing parameter!');
+}
+const foo = (bar = mandatory()) => {
+    return bar;
+}
+
+try {
+    foo();
+} catch (error) {
+    console.log(error.message);
+}
+console.log(foo('Hii'));
+
+/**
+ * 13. Object[key]
+ */
+
+ // object validation rules
+const schema = {
+    first: {
+      required:true
+    },
+    last: {
+      required:true
+    }
+}
+// universal validation function
+const validate = (schema, values) => {
+  for(field in schema) {
+    if(schema[field].required) {
+      if(!values[field]) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+console.log(validate(schema, {first:'Bruce'})); // false
+console.log(validate(schema, {first:'Bruce',last:'Wayne'})); // true
+
+/**
+ * 14. Bitwise IndexoOf
+ */
+arr = [ 1, 2 , 3]
+item = 4
+if(~arr.indexOf(item)) { // Confirm item IS found
+    console.log(`item ${item} found!`);
+}
+if(!~arr.indexOf(item)) { // Confirm item IS NOT found
+    console.log(`item ${item} not found!`);
+}
