@@ -1,0 +1,25 @@
+- React Hooks
+- React context API for passing props
+- styled component
+- React Fragments
+
+
+React Advance (15 Days - Part 1):-
+
+- Error Boundaries
+- Forwarding Refs
+- Fragments
+- JSX in depth
+- Refs and the Dom
+- Typechecking With PropTypes
+
+Javascript Advance topics (15 Days - Part 1):-
+
+- JavaScript Prototype
+- JavaScript(ES6) Class
+- IIFE
+- JavaScript Closures
+- The Module Pattern
+- Currying
+- Memoization
+- Polymorphism in JavaScript

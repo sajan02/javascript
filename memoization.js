@@ -1,4 +1,6 @@
 /**
+ * Memoization is a programming technique that attempts to increase a function’s 
+ * performance by caching its previously computed results.
  * Memoization is the programmatic practice of making long recursive/iterative functions run much faster.
  * It’s best to implement memoization on functions that are pure and involve heavy, repetitive calculations.
  * @function memo
@@ -31,4 +33,8 @@ var fab = memo(function(n){
 console.log(fab(40));
 console.log(fab(9));
 console.log(fab(5));
+
+var dataHandler = memo2();
+console.log(dataHandler('sajan','sajan'));
+console.log(dataHandler('anjali','anjali'));
 
